@@ -1,0 +1,10 @@
+---
+# file: install-and-configure.yml
+
+ - hosts: tendrl-api-host
+   remote_user: root
+   roles:
+    - initialize
+    - install-pkgs
+    - configure
+    - post-install

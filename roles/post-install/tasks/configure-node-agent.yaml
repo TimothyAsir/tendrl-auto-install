@@ -1,0 +1,8 @@
+---
+
+    - name: configure etcd listen clients
+      lineinfile:
+          dest=/etc/tendrl/node-agent/node-agent.conf.yaml
+          backrefs=yes
+          regexp='^etcd_connection'
+          line='etcd_connection={{inventory_hostname}}'

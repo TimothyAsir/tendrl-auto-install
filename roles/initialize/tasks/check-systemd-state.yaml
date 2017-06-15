@@ -1,0 +1,12 @@
+---
+# file: common/check-systemd.yml
+- name: checking systemd running
+  command: systemctl status
+  ignore_errors: yes
+  register: systemd_not_working
+
+- name: re-checking systemd running
+  command: systemctl status 2>&1 >/dev/null | grep "chroot"
+  ignore_errors: yes
+  register: systemd_not_working
+  when: systemd_not_working == 0

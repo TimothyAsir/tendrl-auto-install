@@ -1,0 +1,6 @@
+---
+# file: roles/initialize/tasks/main.yml
+
+- include: check-systemd-state.yaml
+- include: install-repos.yaml
+- include: disable-firewalld.yaml

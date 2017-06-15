@@ -1,0 +1,11 @@
+---
+
+    - name: copy tendrl release repo file
+      copy:
+        src=~/automake/config/tendrl-release-epel-7.repo
+        dest=/etc/yum.repos.d/tendrl-release-epel-7.repo force=no
+
+    - name: copy tendrl dependencies repo file
+      copy:
+        src=~/automake/config/tendrl-dependencies-epel-7.repo
+        dest=/etc/yum.repos.d/tendrl-dependencies-epel-7.repo force=no

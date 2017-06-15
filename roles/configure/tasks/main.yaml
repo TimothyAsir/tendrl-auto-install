@@ -1,0 +1,5 @@
+---
+# file: roles/configure/tasks/main.yml
+
+- include: configure-api.yaml
+- include: configure-etcd.yaml

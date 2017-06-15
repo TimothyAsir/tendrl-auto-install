@@ -1,0 +1,19 @@
+---
+
+    - name: installing epel-release
+      action:
+        yum
+          name=epel-release
+          state=installed
+
+    - name: installing etcd
+      action:
+        yum
+          name=etcd
+          state=installed
+
+    - name: installing tendrl-api
+      action:
+        yum
+          name=tendrl-api
+          state=installed

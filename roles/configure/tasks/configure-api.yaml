@@ -1,0 +1,6 @@
+---
+
+    - name: configure tendrl-api
+      copy:
+        src=~/automake/config/etcd.yml
+        dest=/etc/tendrl/etcd.yml force=yes

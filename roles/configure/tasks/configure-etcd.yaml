@@ -1,0 +1,15 @@
+---
+
+    - name: configure etcd listen clients
+      lineinfile:
+          dest=/etc/etcd/etcd.conf
+          backrefs=yes
+          regexp='^#ETCD_LISTEN_CLIENT_URLS='
+          line='ETCD_LISTEN_CLIENT_URLS="{{inventory_hostname}}:2379"'
+
+    - name: configure etcd send clinets
+      lineinfile:
+          dest=/etc/etcd/etcd.conf
+          backrefs=yes
+          regexp='^#ETCD_ADVERTISE_CLIENT_URLS*'
+          line='ETCD_ADVERTISE_CLIENT_URLS="{{inventory_hostname}}:2379"'

@@ -1,0 +1,16 @@
+---
+
+    - name: Update package "api" to latest version
+      yum:
+        name: tendrl-api
+        state: latest
+
+    - name: Update package "commons" to latest version
+      yum:
+        name: tendrl-commons
+        state: latest
+
+    - name: Update package "node-agent" to latest version
+      yum:
+        name: tendrl-node-agent
+        state: latest

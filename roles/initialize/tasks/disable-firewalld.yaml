@@ -1,0 +1,24 @@
+---
+
+    - name: make sure firewalld installed
+      action:
+         yum pkg=firewalld state=installed 
+      tags:
+         - install
+         - firewalld
+ 
+    - name: make sure firewalld disabled
+      service:
+         name=firewalld
+         enabled=no
+      tags:
+         - install
+         - firewalld
+
+    - name: make sure firewalld stopped
+      service:
+         name=firewalld
+         state=stopped
+      tags:
+         - install
+         - firewalld

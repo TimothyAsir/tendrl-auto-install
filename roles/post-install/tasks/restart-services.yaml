@@ -1,0 +1,11 @@
+---
+
+    - name: Restart etcd service
+      service:
+        name: etcd
+        state: restarted
+
+    - name: Restart httpd service
+      service:
+        name: httpd
+        state: restarted

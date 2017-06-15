@@ -1,0 +1,5 @@
+---
+# file: roles/post-install/tasks/main.yml
+
+- include: restart-services.yaml
+- include: configure-node-agent.yaml
