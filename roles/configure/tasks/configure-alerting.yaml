@@ -1,0 +1,8 @@
+---
+
+    - name: configure etcd details
+      lineinfile:
+          dest=/etc/tendrl/alerting/alerting.conf.yaml
+          backrefs=yes
+          regexp='^etcd_connection'
+          line='etcd_connection={{inventory_hostname}}'

@@ -14,3 +14,18 @@
       yum:
         name: tendrl-node-agent
         state: latest
+
+    - name: Update package "dashboard" to latest version
+      yum:
+        name: tendrl-dashboard
+        state: latest
+
+    - name: Update package "performance-monitoring" to latest version
+      yum:
+        name: tendrl-performance-monitoring
+        state: latest
+
+    - name: Update package "alerting" to latest version
+      yum:
+        name: tendrl-alerting
+        state: latest

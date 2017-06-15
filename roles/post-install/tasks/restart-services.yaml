@@ -9,3 +9,18 @@
       service:
         name: httpd
         state: restarted
+
+    - name: Restart carbon cache
+      service:
+        name: carbon-cache
+        state: restarted
+
+    - name: Restart tendrl-performance-monitoring
+      service:
+        name: tendrl-performance-monitoring
+        state: restarted
+
+    - name: Restart tendrl-alerting
+      service:
+        name: tendrl-alerting
+        state: restarted

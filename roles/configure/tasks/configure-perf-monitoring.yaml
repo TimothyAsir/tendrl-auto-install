@@ -1,0 +1,28 @@
+---
+
+   - name: Init graphite-db
+     command: /usr/lib/python2.7/site-packages/graphite/manage.py syncdb --noinput
+
+   - name: db permission
+     command: chown apache:apache /var/lib/graphite-web/graphite.db
+
+   - name: configure etcd details
+     lineinfile:
+         dest=/etc/tendrl/performance-monitoring/performance-monitoring.conf.yaml
+         backrefs=yes
+         regexp='^etcd_connection'
+         line='etcd_connection={{inventory_hostname}}'
+
+   - name: configure time series db
+     lineinfile:
+         dest=/etc/tendrl/performance-monitoring/performance-monitoring.conf.yaml
+         backrefs=yes
+         regexp='^time_series_db_server'
+         line='time_series_db_server={{inventory_hostname}}'
+
+   - name: configure api server address
+     lineinfile:
+         dest=/etc/tendrl/performance-monitoring/performance-monitoring.conf.yaml
+         backrefs=yes
+         regexp='^api_server_addr'
+         line='api_server_addr={{inventory_hostname}}'
