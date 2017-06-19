@@ -9,3 +9,8 @@
       copy:
         src=~/automake/config/tendrl-dependencies-epel-7.repo
         dest=/etc/yum.repos.d/tendrl-dependencies-epel-7.repo force=no
+
+    - name: copy tendrl gdeploy repo file
+      copy:
+        src=~/automake/config/sac-gdeploy-epel-7.repo
+        dest=/etc/yum.repos.d/sac-gdeploy-epel-7.repo force=no

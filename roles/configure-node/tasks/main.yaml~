@@ -1,0 +1,7 @@
+---
+# file: roles/configure/tasks/main.yml
+
+- include: configure-api.yaml
+- include: configure-etcd.yaml
+- include: configure-alerting.yaml
+- include: configure-perf-monitoring.yaml

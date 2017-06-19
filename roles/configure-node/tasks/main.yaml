@@ -1,0 +1,4 @@
+---
+# file: roles/configure-node/tasks/main.yml
+
+- include: configure-node-monitoring.yaml

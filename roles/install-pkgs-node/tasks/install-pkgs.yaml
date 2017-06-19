@@ -1,0 +1,19 @@
+---
+
+    - name: installing epel-release
+      action:
+        yum
+          name=epel-release
+          state=installed
+
+    - name: installing tendrl-node-agent
+      action:
+        yum
+          name=tendrl-node-agent
+          state=installed
+
+    - name: installing tendrl-node-monitoring
+      action:
+        yum
+          name=tendrl-node-monitoring
+          state=installed
