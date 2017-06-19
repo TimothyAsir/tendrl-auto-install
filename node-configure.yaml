@@ -1,0 +1,10 @@
+---
+# file: node-configure.yml
+
+ - hosts: tendrl-nodes
+   remote_user: root
+   roles:
+    - initialize
+    - install-pkgs-node
+    - configure-node
+    - post-install-node

@@ -1,0 +1,16 @@
+---
+
+    - name: Update package "commons" to latest version
+      yum:
+        name: tendrl-commons
+        state: latest
+
+    - name: Update package "node-agent" to latest version
+      yum:
+        name: tendrl-node-agent
+        state: latest
+
+    - name: Update package "node-monitoring" to latest version
+      yum:
+        name: tendrl-node-monitoring
+        state: latest

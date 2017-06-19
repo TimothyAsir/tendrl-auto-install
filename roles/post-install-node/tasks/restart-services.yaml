@@ -1,0 +1,7 @@
+---
+
+    - name: Restart tendrl-node-agent
+      service:
+        name: tendrl-node-agent
+        enabled: yes
+        state: restarted
