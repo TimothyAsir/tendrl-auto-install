@@ -1,0 +1,5 @@
+[ceph_osd_repo_x86_64_]
+name=http://download-node-02.eng.bos.redhat.com/rcm-guest/ceph-drops/auto/ceph-2-rhel-7-compose/latest-RHCEPH-2-RHEL-7/compose/OSD/x86_64/os/
+baseurl=http://download-node-02.eng.bos.redhat.com/rcm-guest/ceph-drops/auto/ceph-2-rhel-7-compose/latest-RHCEPH-2-RHEL-7/compose/OSD/x86_64/os/
+enabled=1
+gpgcheck=0

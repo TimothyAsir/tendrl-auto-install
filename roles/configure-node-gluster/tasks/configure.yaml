@@ -1,0 +1,12 @@
+---
+
+    - name: install gluster repo
+      copy:
+        src=config/sac-gdeploy-epel-7.repo
+        dest=/etc/yum.repos.d/sac-gdeploy-epel-7.repo force=no
+
+    - name: add tag for gluster nodes
+      lineinfile:
+          dest=/etc/tendrl/node-agent/node-agent.conf.yaml
+          regexp='^provisioner/gluster'
+          line='  - provisioner/gluster'

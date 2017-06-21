@@ -1,5 +1,5 @@
 ---
-# file: roles/install-pkgs/tasks/main.yml
+# file: roles/install-pkgs-node/tasks/main.yml
 
 - include: install-pkgs.yaml
 - include: update-pkgs.yaml

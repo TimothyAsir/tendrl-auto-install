@@ -1,5 +1,5 @@
 ---
-# file: node-configure.yml
+# file: node-install-mon.yml
 
  - hosts: tendrl-nodes
    remote_user: root
@@ -7,4 +7,5 @@
     - initialize
     - install-pkgs-node
     - configure-node
+    - configure-node-ceph-mon
     - post-install-node

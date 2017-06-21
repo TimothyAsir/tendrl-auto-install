@@ -14,3 +14,13 @@
       copy:
         src=config/sac-gdeploy-epel-7.repo
         dest=/etc/yum.repos.d/sac-gdeploy-epel-7.repo force=no
+
+    - name: copy epel repo file
+      copy:
+        src=config/epel.repo
+        dest=/etc/yum.repos.d/epel.repo force=no
+
+    - name: copy epel-testing repo file
+      copy:
+        src=config/epel-testing.repo
+        dest=/etc/yum.repos.d/epel-testing.repo force=no

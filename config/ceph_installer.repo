@@ -1,0 +1,5 @@
+[download-node-02.eng.bos.redhat.com_rcm-guest_ceph-drops_auto_rhscon-2-rhel-7-compose_latest-RHSCON-2-RHEL-7_compose_Installer_x86_64_os_]
+name=http://download-node-02.eng.bos.redhat.com/rcm-guest/ceph-drops/auto/rhscon-2-rhel-7-compose/latest-RHSCON-2-RHEL-7/compose/Installer/x86_64/os/
+baseurl=http://download-node-02.eng.bos.redhat.com/rcm-guest/ceph-drops/auto/rhscon-2-rhel-7-compose/latest-RHSCON-2-RHEL-7/compose/Installer/x86_64/os/
+enabled=1
+gpgcheck=0 

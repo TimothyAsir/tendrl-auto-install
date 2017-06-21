@@ -1,0 +1,8 @@
+---
+
+    - name: install ceph-mon repo
+      copy:
+        src=config/ceph_MON.repo
+        dest=/etc/yum.repos.d/ceph_MON.repo force=no
+
+
