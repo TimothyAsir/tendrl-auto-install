@@ -1,0 +1,4 @@
+---
+# file: roles/configure-node-gluster/tasks/main.yml
+
+- include: configure.yaml

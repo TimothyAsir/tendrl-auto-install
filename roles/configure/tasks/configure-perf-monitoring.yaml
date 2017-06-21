@@ -7,11 +7,11 @@
      command: chown apache:apache /var/lib/graphite-web/graphite.db
 
    - name: configure etcd details
-     lineinfile:
+     replace:
          dest=/etc/tendrl/performance-monitoring/performance-monitoring.conf.yaml
          backrefs=yes
-         regexp='^etcd_connection'
-         line='etcd_connection={{inventory_hostname}}'
+         regexp='0.0.0.0'
+         replace='{{inventory_hostname}}'
 
    - name: configure time series db
      lineinfile:

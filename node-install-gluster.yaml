@@ -1,0 +1,11 @@
+---
+# file: node-install-mon.yml
+
+ - hosts: tendrl-nodes
+   remote_user: root
+   roles:
+    - initialize
+    - install-pkgs-node
+    - configure-node
+    - configure-node-gluster
+    - post-install-node

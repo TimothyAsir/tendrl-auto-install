@@ -1,14 +1,7 @@
 ---
 
     - name: configure etcd listen clients
-      lineinfile:
+      replace:
           dest=/etc/tendrl/node-agent/node-agent.conf.yaml
-          backrefs=yes
-          regexp='^etcd_connection'
-          line='etcd_connection={{inventory_hostname}}'
-
-    - name: add tag for gluster notdes
-      lineinfile:
-          dest=/etc/tendrl/node-agent/node-agent.conf.yaml
-          regexp='^provisioner/gluster'
-          line='provisioner/gluster'
+          regexp='0.0.0.0'
+          replace="{{ lookup('ini', 'ip section=etcd-server file=tendrl.conf') }}"

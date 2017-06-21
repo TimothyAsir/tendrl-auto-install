@@ -1,8 +1,7 @@
 ---
 
     - name: configure etcd details
-      lineinfile:
+      replace:
           dest=/etc/tendrl/alerting/alerting.conf.yaml
-          backrefs=yes
-          regexp='^etcd_connection'
-          line='etcd_connection={{inventory_hostname}}'
+          regexp='0.0.0.0'
+          replace="{{ lookup('ini', 'ip section=etcd-server file=tendrl.conf') }}"

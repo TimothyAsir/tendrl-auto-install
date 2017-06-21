@@ -1,0 +1,11 @@
+---
+# file: node-configure.yml
+
+ - hosts: tendrl-nodes
+   remote_user: root
+   roles:
+    - initialize
+    - install-pkgs-node
+    - configure-node
+    - configure-node-ceph-provisioner
+    - post-install-node

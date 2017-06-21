@@ -1,0 +1,24 @@
+---
+
+    - name: install ceph installer repo
+      copy:
+        src=config/ceph_installer.repo
+        dest=/etc/yum.repos.d/ceph_installer.repo force=no
+
+    - name: installing ceph-installer
+      action:
+        yum
+          name=ceph-installer
+          state=latest
+
+    - name: installing tendrl ceph integration
+      action:
+        yum
+          name=tendrl-ceph-integration
+          state=latest
+
+    - name: add tag for ceph provisioner
+      lineinfile:
+          dest=/etc/tendrl/node-agent/node-agent.conf.yaml
+          regexp='^provisioner/ceph'
+          line='  - provisioner/ceph'

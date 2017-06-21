@@ -1,0 +1,8 @@
+---
+
+    - name: install ceph-osd repo
+      copy:
+        src=config/ceph_OSD.repo
+        dest=/etc/yum.repos.d/ceph_OSD.repo force=no
+
+
