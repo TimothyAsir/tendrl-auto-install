@@ -113,35 +113,61 @@ ROLE: YAML
 Does the following tasks:
 initialize
  checking systemd running ***********************************
+ 
  re-checking systemd running ********************************
+ 
  copy tendrl release repo file ******************************
+ 
  copy tendrl dependencies repo file *************************
+ 
  copy tendrl gdeploy repo file ******************************
+ 
  make sure firewalld installed ******************************
+ 
  make sure firewalld disabled *******************************
+ 
  make sure firewalld stopped ********************************
 
+
 install-pkgs-node
- installing epel-release *****************************
- installing tendrl-node-agent ************************
- installing tendrl-node-monitoring *******************
+
+installing epel-release *****************************
+
+installing tendrl-node-agent ************************
+
+installing tendrl-node-monitoring *******************
+
 
 update-packages
- Update package "commons" to latest version **********
- Update package "node-agent" to latest version *******
- Update package "node-monitoring" to latest version **
+
+Update package "commons" to latest version **********
+
+Update package "node-agent" to latest version *******
+
+Update package "node-monitoring" to latest version **
+
 
 configure-node
- configure node-monitoring ******************************
- install ceph-mon repo *************************
- Restart tendrl-node-agent ***************************
- configure etcd listen clients ***********************
+
+configure node-monitoring ******************************
+
+install ceph-mon repo *************************
+
+Restart tendrl-node-agent ***************************
+
+configure etcd listen clients ***********************
+
 
 3) Ceph Osd Node: node-install-osd.yaml
-   [root@dhcp42-16 automake]# ansible-playbook node-install-osd.yaml
+
+   $ansible-playbook node-install-osd.yaml
+
 
 4) Ceph Provisioner Node: node-install-ceph-provisioner.yaml
-   [root@dhcp42-16 automake]# ansible-playbook node-install-ceph-provisioner.yaml
+
+$ansible-playbook node-install-ceph-provisioner.yaml
+
 
 5) Gluster Node: node-install-gluster.yaml
-   [root@dhcp42-16 automake]# ansible-playbook node-install-gluster.yaml
+
+$ansible-playbook node-install-gluster.yaml
